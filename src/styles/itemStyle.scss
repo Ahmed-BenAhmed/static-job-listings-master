@@ -1,0 +1,87 @@
+.item {
+	display: flex;
+	background-color: #fff;
+	padding: 20px;
+	margin: 20px 0;
+	border-radius: 10px;
+	box-shadow: 2px 2px 15px $Desaturated-Dark-Cyan;
+	&.border {
+		border-left: 5px solid $Desaturated-Dark-Cyan;
+	}
+	.item-img {
+		flex: 1;
+		padding: 0 5px;
+	}
+	.item-info {
+		flex: 3;
+		h3 {
+			font-size: $font-size;
+		}
+		.tags {
+			span {
+				color: #fff;
+				padding: 5px 10px;
+				border-radius: 30px;
+			}
+			.company-tag {
+				color: $Desaturated-Dark-Cyan;
+				font-size: 13px !important;
+			}
+			.new-tag {
+				background-color: $Desaturated-Dark-Cyan;
+			}
+			.featured-tag {
+				background-color: $Very-Dark-Grayish-Cyan;
+			}
+		}
+		.item-position {
+			padding-left: 10px;
+			a:hover {
+				transition-duration: .3s;
+				color: $Desaturated-Dark-Cyan;
+			}
+		}
+		.info {
+			padding-left: 10px;
+			span {
+				font-weight: $font-weight-one;
+				color: $Dark-Grayish-Cyan;
+				margin-right: 10px;
+				&.contract {
+					position: relative;
+					padding: 0 15px;
+					&::before,
+					&::after {
+						content: '';
+						position: absolute;
+						top: 5px;
+						width: 3px;
+						height: 3px;
+						border-radius: 10px;
+						background-color: $Dark-Grayish-Cyan;
+					}
+					&::before {
+						left: 0;
+					}
+					&::after {
+						right: 0;
+					}
+				}
+			}
+		}
+	}
+	.item-tags {
+		flex: 4;
+		display: flex;
+		align-items: center;
+		justify-content: flex-end;
+		button {
+			padding: 10px 6px;
+			&:hover {
+				transition-duration: .3s;
+				color: #fff;
+				background-color: $Desaturated-Dark-Cyan;
+			}
+		}
+	}
+}

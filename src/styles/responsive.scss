@@ -1,0 +1,48 @@
+@media(max-width: 990px ) {
+    body {
+        @media(max-width: 375px) {
+            .background {
+                background-image: url('../images/bg-header-mobile.svg');
+            }
+        }
+        .item {
+            display: block;
+            position: relative;
+            margin: 50px 0;
+            .item-img { 
+                position: absolute;
+                top: -30px;
+                left: 25px;
+                img {
+                    width: 60%;
+                }
+            }
+            .item-info {
+                padding: 20px 0;
+                .item-position, .info {
+                    padding: 0;
+                    margin: 0;
+                }
+                .info {
+                    position: relative;
+                    &:after {
+                        content: '';
+                        width: 100%;
+                        height: 2px;
+                        background-color: $Dark-Grayish-Cyan;
+                        position: absolute;
+                        bottom: -10px;
+                        left: 0;
+                    }
+                }
+            }
+            .item-tags {
+                display: block;
+                font-weight: 700;
+                .tag {
+                    margin: 10px 5px;
+                }
+            }
+        }
+	}
+}

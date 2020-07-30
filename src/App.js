@@ -29,12 +29,7 @@ function App() {
 				) : (
 					items
 						.filter((item) => {
-							return (
-								filter.indexOf(item.role.toLowerCase()) >= 0 ||
-								filter.indexOf(item.level.toLowerCase()) >= 0
-								// ||
-								// item.languages.map((language) => filter.indexOf(language.toLocaleLowerCase()) >= 0)
-							);
+							return filter.indexOf(item.role.toLowerCase()) >= 0;
 						})
 						.map((item, index) => (
 							<ItemComponent key={'item' + index} item={item} addToFilter={addToFilter} />

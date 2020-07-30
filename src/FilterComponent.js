@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 export default function FilterComponent(props) {
 	const filters = props.filter;
 	return (
-		<div className={filters === [] ? 'filter none' : 'filter'}>
+		<div className={filters.length === 0 ? 'filter none' : 'filter'}>
 			{filters.map((filter, i) => (
 				<div key={i} className="tag">
 					<button className="tag-name">{filter}</button>
